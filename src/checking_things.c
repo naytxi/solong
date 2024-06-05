@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:46:38 by naotegui          #+#    #+#             */
-/*   Updated: 2024/05/30 15:58:33 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:33:57 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "so_long.h"
 
 void	check_four_walls(t_game *game)
 {
@@ -26,7 +26,8 @@ void	check_four_walls(t_game *game)
 	}
 	while (y--)
 	{
-		if (game->map.map[y][0] != '1' || game->map.map[y][x - 1] != '1')
+		if (game->map.map[y][0] != '1' || game->map.map[y][game->map.x
+			- 1] != '1')
 			ft_error("Sorry an error found\n Walls are missing");
 	}
 }
@@ -52,17 +53,17 @@ void	check_map_elements(t_game *game)
 			if (game->map.map[y][x] == 'P')
 				game->map.zombie++;
 			else if (game->map.map[y][x] == 'C')
-				game->zombie.collect++;
+				game->zombie.c_collect++;
 			else if (game->map.map[y][x] == 'E')
-				game->map.exit++;
+				game->map.count++;
 			else
 				check_map_content(game, x, y);
 			x++;
 		}
 		y++;
 	}
-	if (game->map.zombie != 1 || game->map.exit != 1
-		|| game->zombie.collect < 1 || game->map.exit != 1)
+	if (game->map.zombie != 1 || game->map.count != 1
+		|| game->zombie.c_collect < 1 || game->map.count != 1)
 		ft_error("Ups, error found\nInvalid map content");
 }
 

@@ -6,7 +6,7 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:10:46 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 13:52:01 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:19:39 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# define WALL "textures/bloodwall.xpm"
-# define FLOOR "textures/walkstone.xpm"
-# define PLAYER "textures/zombie.xpm"
+# define BLOODWALL "textures/bloodwall.xpm"
+# define WALKSTONE "textures/walkstone.xpm"
+# define ZOMBIE "textures/zombie.xpm"
 # define EXIT "textures/exit.xpm"
-# define ITEM "textures/brain.xpm"
+# define BRAIN "textures/brain.xpm"
 # define Q 113
 # define W 119
 # define A 97
@@ -68,7 +68,7 @@ typedef struct s_game
 	void		*mlx_win;
 	t_map		map;
 	t_image		img;
-	t_player	zombie;
+	t_zombie	zombie;
 }				t_game;
 
 void			check_map_extension(char *argv1, t_game *game);
@@ -80,12 +80,12 @@ void			check_four_walls(t_game *game);
 void			check_map_elements(t_game *game);
 void			search_player(t_game *game);
 void			check_map_status_update(t_game *game);
-void			check_map_status_errors(t_game *game);
-void			place_pictures(t_game *game);
+void			check_map_status_bugs(t_game *game);
+void			obtain_pictures(t_game *game);
 int				close_game_window(t_game *game);
 int				keyboard_keys(int keycode, t_game *game);
 void			ft_free(t_game *game);
-void			put_player_exit(t_game *game, int x, int y);
+void			put_exit_door(t_game *game, int x, int y);
 void			put_zombie(t_game *game, int x, int y);
 void			put_exit(t_game *game, int x, int y);
 void			put_brains(t_game *game, int x, int y);

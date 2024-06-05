@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:27:40 by naotegui          #+#    #+#             */
-/*   Updated: 2024/05/30 16:07:48 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:10:51 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "so_long.h"
 
 void	ft_free(t_game *game)
 {
@@ -25,8 +25,8 @@ void	ft_free(t_game *game)
 
 void	check_map_status_bugs(t_game *game)
 {
-	if (game->player.c_collect != game->player.brains
-		|| game->player.exit == false)
-		ft_error("Map is unplayable\n");
+	if (game->zombie.c_collect != game->zombie.brains
+		|| game->zombie.exit == false)
+		ft_error("Zombie can`t eat\n");
 	ft_free(game);
 }

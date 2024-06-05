@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 13:30:08 by naotegui          #+#    #+#             */
-/*   Updated: 2024/05/30 16:07:08 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:10:48 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "so_long.h"
 
 void	ft_flood_fill(t_game *game, int y, int x)
 {
@@ -19,7 +19,7 @@ void	ft_flood_fill(t_game *game, int y, int x)
 	if (game->map.map[y][x] == 'C')
 		game->zombie.brains++;
 	if (game->map.map[y][x] == 'E')
-		game->zombie.door = true;
+		game->zombie.exit = true;
 	game->map.map[y][x] = 'F';
 	ft_flood_fill(game, y + 1, x);
 	ft_flood_fill(game, y - 1, x);
@@ -29,7 +29,7 @@ void	ft_flood_fill(t_game *game, int y, int x)
 
 void	map_error(t_game *game)
 {
-	if (game->map.brains != game->zombie.brains || game->zombie.door == false)
+	if (game->map.count != game->zombie.brains || game->zombie.exit == false)
 		ft_error("UUUUG\n Zombie can't eat");
 	ft_free(game);
 }

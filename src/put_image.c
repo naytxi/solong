@@ -6,30 +6,30 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 12:22:05 by naotegui          #+#    #+#             */
-/*   Updated: 2024/05/30 15:58:12 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:09:24 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 static void	xpm_desing(t_game *game)
 {
 	int	x;
 	int	y;
 
-	game->pictures.zombie = mlx_xpm_file_to_image(game->mlx, ZOMBIE,
+	game->img.zombie = mlx_xpm_file_to_image(game->mlx, ZOMBIE,
 			&(x), &(y));
-	game->pictures.bloodwall = mlx_xpm_file_to_image(game->mlx, BLOODWALL,
+	game->img.bloodwall = mlx_xpm_file_to_image(game->mlx, BLOODWALL,
 			&(x), &(y));
-	game->pictures.walkstone = mlx_xpm_file_to_image(game->mlx, WALKSTONE,
+	game->img.walkstone = mlx_xpm_file_to_image(game->mlx, WALKSTONE,
 			&(x), &(y));
-	game->pictures.exit = mlx_xpm_file_to_image(game->mlx, EXIT,
+	game->img.exit = mlx_xpm_file_to_image(game->mlx, EXIT,
 			&(x), &(y));
-	game->pictures.brains = mlx_xpm_file_to_image(game->mlx, BRAIN,
+	game->img.collect = mlx_xpm_file_to_image(game->mlx, BRAIN,
 			&(x), &(y));
 }
 
-static void	place_pictures(t_game *game, int x, int y)
+static void		place_pictures(t_game *game, int x, int y)
 {
 	char	actualposition;
 
@@ -47,7 +47,7 @@ static void	place_pictures(t_game *game, int x, int y)
 	if (actualposition == 'P')
 		put_zombie(game, x, y);
 	if (actualposition == 'D')
-		put_player_exit(game, x, y);
+		put_exit_door(game, x, y);
 }
 
 void	obtain_pictures(t_game *game)

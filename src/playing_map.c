@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:04:40 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/04 13:44:51 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:02:29 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 void	player_movement(t_game *game, int my, int mx)
 {
@@ -21,7 +21,7 @@ void	player_movement(t_game *game, int my, int mx)
 	game->map.map[game->zombie.y + my][game->zombie.x + mx] = 'P';
 	game->zombie.y += my;
 	game->zombie.x += mx;
-	put_images(game);
+	obtain_pictures(game);
 	ft_printf("Zombie movements %d\n", game->zombie.moves++);
 }
 
@@ -35,7 +35,7 @@ void	get_brains(t_game *game, int my, int mx)
 	game->map.map[game->zombie.y + my][game->zombie.x + mx] = 'P';
 	game->zombie.y += my;
 	game->zombie.x += mx;
-	put_images(game);
+	obtain_pictures(game);
 	ft_printf("Zombie movements %d\n", game->zombie.moves++);
 }
 
@@ -53,7 +53,7 @@ void	checking_moves(t_game *game, int my, int mx)
 	if (game->map.map[zy + my][zx + mx] == 'C')
 		return (get_brains(game, my, mx));
 	if (game->map.map[zy + my][zx + mx] == 'E' && game->zombie.brains == 0)
-		return ((void)(quit_game(game)));
+		return ((void)(close_game_window(game)));
 	else
 		game->map.map[zy][zx] = '0';
 	if (game->map.map[zy + my][zx + mx] == 'E')
@@ -62,14 +62,14 @@ void	checking_moves(t_game *game, int my, int mx)
 		game->zombie.y += my;
 		game->zombie.x += mx;
 	}
-	get_images(game);
+	obtain_pictures(game);
 	ft_printf("Zombie movements %d\n", game->zombie.moves++);
 }
 
 int	keyboard_keys(int keycode, t_game *game)
 {
 	if (keycode == Q || keycode == ESC)
-		quit_game(game);
+		close_game_window(game);
 	else if (keycode == W)
 		checking_moves(game, -1, 0);
 	else if (keycode == S)

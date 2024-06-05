@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:04:24 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 13:30:23 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 13:54:27 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 int	close_game_window(t_game *game)
 {

@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:04:37 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 13:48:28 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:52:13 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 void	ft_error(char *message)
 {
@@ -26,7 +26,7 @@ static void	check_number_of_args(int argc)
 
 void	hooks(t_game *game)
 {
-	mlx_hook(game->mlx_win, 17, 1, destroy_map_window, game);
+	mlx_hook(game->mlx_win, 17, 1, close_game_window, game);
 	mlx_hook(game->mlx_win, 2, 1, keyboard_keys, game);
 }
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	map_lenght(&game);
 	take_map(&game);
 	check_four_walls(&game);
-	check_map_content(&game);
+	check_map_elements(&game);
 	search_player(&game);
 	check_map_status_update(&game);
 	check_map_status_bugs(&game);
@@ -49,7 +49,7 @@ int	main(int argc, char **argv)
 	game.mlx_win = mlx_new_window(game.mlx, game.map.x * 64, game.map.y * 64,
 			"so_long");
 	hooks(&game);
-	get_images(&game);
+	obtain_pictures(&game);
 	mlx_loop(game.mlx);
 	return (0);
 }

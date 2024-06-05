@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 12:36:18 by naotegui          #+#    #+#             */
-/*   Updated: 2024/05/30 16:09:17 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:21:09 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 void	put_walkstone(t_game *game, int x, int y)
 {
@@ -26,7 +26,7 @@ void	put_bloodwall(t_game *game, int x, int y)
 
 void	put_brains(t_game *game, int x, int y)
 {
-	mlx_put_image_to_window(game->mlx, game->mlx_win, game->img.brain,
+	mlx_put_image_to_window(game->mlx, game->mlx_win, game->img.collect,
 		(x * 64), (y * 64));
 }
 

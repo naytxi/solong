@@ -6,11 +6,11 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:04:20 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 13:11:40 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:10:45 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "..\so_long.h"
+#include "so_long.h"
 
 void	check_map_extension(char *argv1, t_game *game)
 {
