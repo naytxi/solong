@@ -6,7 +6,7 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 13:30:08 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 16:10:48 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:06:22 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ft_flood_fill(t_game *game, int y, int x)
 void	map_error(t_game *game)
 {
 	if (game->map.count != game->zombie.brains || game->zombie.exit == false)
-		ft_error("UUUUG\n Zombie can't eat");
+		ft_error("Error\n Zombie can't eat");
 	ft_free(game);
 }

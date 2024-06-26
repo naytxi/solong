@@ -6,7 +6,7 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:04:20 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 16:10:45 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/26 12:55:56 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	map_lenght(t_game *game)
 		ft_error("Error404\nMap not found\n");
 	line = get_next_line(fd);
 	if (!line)
-		ft_error("Error\nMap is empty (Insert Travolta's file\n");
+		ft_error("Error\nMap is empty (Insert Travolta's file)\n");
 	game->map.x = ft_strlen(line) - 1;
 	while (line)
 	{

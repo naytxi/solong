@@ -6,7 +6,7 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:27:40 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 16:10:51 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:06:27 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	check_map_status_bugs(t_game *game)
 {
 	if (game->zombie.c_collect != game->zombie.brains
 		|| game->zombie.exit == false)
-		ft_error("Zombie can`t eat\n");
+		ft_error("Error\nZombie can`t eat\n");
 	ft_free(game);
 }

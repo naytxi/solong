@@ -6,7 +6,7 @@
 /*   By: naotegui <naotegui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 12:22:05 by naotegui          #+#    #+#             */
-/*   Updated: 2024/06/05 17:21:46 by naotegui         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:36:31 by naotegui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	xpm_desing(t_game *game)
 			&(x), &(y));
 }
 
-static void		place_pictures(t_game *game, int x, int y)
+static void	place_pictures(t_game *game, int x, int y)
 {
 	char	actualposition;
 
