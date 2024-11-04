@@ -1,6 +1,8 @@
 ![solongheader](https://github.com/user-attachments/assets/e4c71f73-2532-474c-818b-fe018a98c1ab)
 ![Badge completado](https://img.shields.io/badge/STATUS-%20completed-green)
 
+![zombie gif](https://i.pinimg.com/originals/5d/c0/b0/5dc0b09e4922c6862500eb4c1992e72e.gif)
+
 🖐️ Hi! I'm Nay and I'm currently learning to code.
 
 <h2>🚀ABOUT</h2>
