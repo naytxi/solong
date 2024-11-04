@@ -1,9 +1,8 @@
-
-![s](https://github.com/user-attachments/assets/1056e273-2603-41b4-bfbc-76c7f1cf50be)
-![Texto alternativo](https://i.pinimg.com/564x/cd/5a/d6/cd5ad6b453e8fef36dc3c27ff399eece.jpg)
+![solongheader](https://github.com/user-attachments/assets/e4c71f73-2532-474c-818b-fe018a98c1ab)
+![Badge completado](https://img.shields.io/badge/STATUS-%20completed-green)
 
 🖐️ Hi! I'm Nay and I'm currently learning to code.
 
-🚀 My first little videogame, this 42 project was the most funny and difficult, you play like a hungry zombie and you need to eat before continuing your path.
+🚀 My first little videogame, this 42 project was the most funny and difficult to do, you play like a hungry zombie and you need to eat before continuing your path.
 
 ✈️ Welcome to my journey.
