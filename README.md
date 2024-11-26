@@ -9,7 +9,8 @@
  My first little videogame, this 42 project was the most funny and difficult to do, you play like a hungry zombie and you need to eat before continuing your path.
 
 The "so_long" project is a 2D game developed.
-The game is a sort graphical adventure where the zombie navigates through a dungeon, collecting brains. The main objective is to reach the exit after collecting all necessary brains.
+The game is a sort graphical adventure where the zombie navigates through a dungeon, collecting brains. 
+The main objective is to reach the exit after collecting all necessary brains.
 
 <h2>❓HOW TO PLAY</h2>
 
